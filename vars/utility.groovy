@@ -1,5 +1,5 @@
 void runPipeline(String podYaml, Closure pippeline) {
-    def strPodYaml = libraryResource podYaml
+    def strPodYaml = libraryResource "$podYaml"
 
     podTemplate(yaml: strPodYaml) {
         node(POD_LABEL) {
