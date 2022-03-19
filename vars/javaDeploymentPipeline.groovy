@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import com.mrc.stages.CheckoutStage
+import mrc.stages.CheckoutStage
 /*import com.mrc.stages.InitStage
 import com.mrc.stages.BuildStage
 import com.mrc.stages.DeployStage*/
@@ -8,7 +8,7 @@ import com.mrc.stages.DeployStage*/
 def call() {
     utility.runPipeline('deployPOd.yaml') {
         try {
-            new CheckoutStage().action()
+            new CheckoutStage().invoke()
         } catch(error) {
         }
     }
