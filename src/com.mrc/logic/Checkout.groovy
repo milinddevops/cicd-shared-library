@@ -1,5 +1,5 @@
-package com.mrc.logc
+package com.mrc.logic
 
 void action() {
-    println('Checkout stage action ...')
+    checkout(scm: jenkins.scm)
 }

@@ -5,6 +5,6 @@ import com.mrc.logic.Checkout
 void action() {
     return stage('Checout') {
         
-        new Checout.action()
+        return new Checout.action()
     }
 }
