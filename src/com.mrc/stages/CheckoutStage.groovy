@@ -3,7 +3,7 @@ package com.mrc.stages
 import com.mrc.logic.Checkout
 
 void action() {
-    stage('Checout') {
+    return stage('Checout') {
         
         new Checout.action()
     }
