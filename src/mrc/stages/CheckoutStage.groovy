@@ -1,6 +1,6 @@
-package com.mrc.stages
+package mrc.stages
 
-import com.mrc.logic.Checkout
+import mrc.logic.Checkout
 
 void action() {
     stage('Checout') {        
