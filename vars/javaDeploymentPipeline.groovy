@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 import com.mrc.stages.CheckoutStage
 import com.mrc.stages.InitStage
 import com.mrc.stages.BuildStage
