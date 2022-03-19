@@ -8,7 +8,7 @@ import com.mrc.stages.DeployStage*/
 def call() {
     utility.runPipeline('deployPOd.yaml') {
         try {
-            new CheckoutStage.action()
+            new CheckoutStage().action()
         } catch(error) {
         }
     }
