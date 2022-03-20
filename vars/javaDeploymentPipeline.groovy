@@ -13,7 +13,7 @@ def call(List applications) {
         choice(name: 'size', choices: ['S', 'M', 'L'],  description: 'Size choice (S/M/L)')
     ])])
 
-    pipelineData pipelinedata = new pipelineData(this)
+    //pipelineData pipelinedata = new pipelineData(this)
 
     utility.runPipeline('deployPod.yaml') {
 
