@@ -1,4 +1,4 @@
-package mrc.common.pipelineData
+package mrc.common.pipelineState
 
 class pipelineData {
     String applicationName

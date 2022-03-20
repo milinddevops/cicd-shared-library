@@ -1,4 +1,4 @@
-package mrc.common.pippelineData
+package mrc.common.pipelineState
 
 // Show application list
 def applicationNames(List applicationNames) {
