@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import mrc.common.pipelineData
+import mrc.common.pipelineState.pipelineData
 import mrc.stages.CheckoutStage
 /*import com.mrc.stages.InitStage
 import com.mrc.stages.BuildStage
