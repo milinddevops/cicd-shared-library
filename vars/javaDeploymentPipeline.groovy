@@ -12,7 +12,7 @@ def call(List applications) {
             choice(name: 'CHOICES', choices: [applications], description: 'This is a list of Application to be deployed'
         )])
 
-    pipelineData pipelinedata = new pipelineData(this)
+    //pipelineData pipelinedata = new pipelineData(this)
 
     utility.runPipeline('deployPod.yaml') {
 
