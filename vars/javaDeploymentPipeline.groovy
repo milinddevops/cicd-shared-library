@@ -8,21 +8,13 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     //pipelineData.setJobParams(this, applications)
-        this.properties([
+    this.properties([
             this.parameters([
-                booleanParam(defaultValue: false, name: 'BuildAll', description: ''),
-                [$class: 'ChoiceParameter', choiceType: 'PT_CHECKBOX',
-                    description: 'Choose environment category.',
-                    name: 'ENVIRONMENT',
-                    script: [
-                        $class: 'GroovyScript',
-                        script: [sandbox: true, script: 'return ["QA", "DEV", "PROD"]']
-                    ]
-                ]
-            ])
-        ])
+                choice(name: 'CHOICES', choices: [applications, description: 'This is a list of Application to be deployed'
+            )
+    ])])
 
-    //pipelineData pipelinedata = new pipelineData(this)
+    pipelineData pipelinedata = new pipelineData(this)
 
     utility.runPipeline('deployPod.yaml') {
 
