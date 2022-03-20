@@ -8,9 +8,19 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     //pipelineData.setJobParams(this, applications)
-        parameters([
-            choice(name: 'CHOICES', choices: [applications], description: 'This is a list of Application to be deployed'
-        )])
+        properties([
+            parameters([
+                booleanParam(defaultValue: false, name: 'BuildAll', description: ''),
+                [$class: 'ChoiceParameter', choiceType: 'PT_CHECKBOX',
+                    description: 'Choose environment category.',
+                    name: 'ENVIRONMENT',
+                    script: [
+                        $class: 'GroovyScript',
+                        script: [sandbox: true, script: 'return ["QA", "DEV", "PROD"]']
+                    ]
+                ]
+            ])
+        ])
 
     //pipelineData pipelinedata = new pipelineData(this)
 
