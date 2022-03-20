@@ -8,6 +8,7 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     pipelineData.setJobParams(this, applications)
+    pipelineData pipelinedata = new pipelineData(this)
 
     utility.runPipeline('deployPod.yaml') {
 

@@ -7,5 +7,6 @@ def applicationNames(List applicationNames) {
 
     return choice(name: 'CHOICES', 
                 choices: application, 
-                description: 'This is a list of Application to be deployed')
+                description: 'This is a list of Application to be deployed'
+            )
 }

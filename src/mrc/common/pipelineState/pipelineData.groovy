@@ -5,7 +5,7 @@ class pipelineData {
     String applicationName
     String imageTag
 
-    pipelineData(def jenkins, List applicationNames) {
+    pipelineData(def jenkins) {
         
     }
 
@@ -14,7 +14,7 @@ class pipelineData {
 
         jenkins.properties([
             jenkins.parameters([
-                choice(name: 'CHOICES', choices: ['pet-clinic', 'clinic'], description: 'This is a list of Application to be deployed')
+                choice(name: 'CHOICES', choices: applicationNames, description: 'This is a list of Application to be deployed')
         ])])
     }
 
