@@ -15,7 +15,7 @@ class pipelineData {
         jenkins.properties([
             jenkins.parameters([
                 choice(name: 'CHOICES', 
-                choices: application, 
+                choices: applicationNames, 
                 description: 'This is a list of Application to be deployed')
             ])
         ])
