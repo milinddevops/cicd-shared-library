@@ -14,7 +14,7 @@ class pipelineData {
         
         properties([
             parameters([
-                choice(name: 'size', choices: ['S', 'M', 'L'],  description: 'Size choice (S/M/L)')
+                choice(name: 'size', choices: ['S': 'S', 'L': 'L', 'M': 'M'],  description: 'Size choice (S/M/L)')
         ])])
         /*properties([
             parameters([
