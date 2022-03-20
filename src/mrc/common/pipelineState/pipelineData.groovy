@@ -14,7 +14,7 @@ class pipelineData {
 
         properties([
             parameters([
-                choice(name: 'CHOICES', choices: ['S', 'M', 'L'], description: 'This is a list of Application to be deployed'
+                choice(name: 'CHOICES', choices: applicationNames, description: 'This is a list of Application to be deployed'
             )
         ])])
     }
