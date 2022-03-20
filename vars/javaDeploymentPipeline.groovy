@@ -11,7 +11,7 @@ def call(List applications) {
 
     properties([
     parameters([
-        choice(name: 'CHOICES', choices: applications, description: 'This is a list of Application to be deployed'
+        choice(name: 'CHOICES', choices: applications, description: 'This is a list of Application to be deployed')
     ])])
 
     //pipelineData pipelinedata = new pipelineData(this)
