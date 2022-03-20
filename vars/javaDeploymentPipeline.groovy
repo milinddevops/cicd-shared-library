@@ -8,11 +8,9 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     //pipelineData.setJobParams(this, applications)
-    this.properties([
-            this.parameters([
-                choice(name: 'CHOICES', choices: [applications], description: 'This is a list of Application to be deployed'
-            )
-    ])])
+    this.parameters([
+            choice(name: 'CHOICES', choices: [applications], description: 'This is a list of Application to be deployed'
+        )])
 
     pipelineData pipelinedata = new pipelineData(this)
 
