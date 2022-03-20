@@ -7,12 +7,12 @@ import com.mrc.stages.BuildStage
 import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
-    pipelineData.setJobParams(this, applications)
-    
-    /*properties([
+    //pipelineData.setJobParams(this, applications)
+
+    properties([
     parameters([
-        choice(name: 'size', choices: ['S', 'M', 'L'],  description: 'Size choice (S/M/L)')
-    ])]) */
+        choice(name: 'CHOICES', choices: applications, description: 'This is a list of Application to be deployed'
+    ])])
 
     //pipelineData pipelinedata = new pipelineData(this)
 
