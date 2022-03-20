@@ -4,6 +4,6 @@ import mrc.logic.Checkout
 
 void action() {
     stage('Checout') {        
-         checkout(scm: jenkins.scm)
+         new Checkout().action()
     }
 }

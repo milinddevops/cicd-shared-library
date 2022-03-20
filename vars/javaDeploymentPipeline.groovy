@@ -23,6 +23,8 @@ def call(List applications) {
             new CheckoutStage().action()
 
 
+
+
         } catch(error) {
         }
     }
