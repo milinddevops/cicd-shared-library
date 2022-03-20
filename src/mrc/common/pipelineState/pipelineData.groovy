@@ -10,9 +10,13 @@ class pipelineData {
     }
 
     static void setJobParams(def jenkins, List applicationNames) {
+        //jenkinspropertiesparameters jpp = new jenkinspropertiesparameters()
+
         jenkins.properties([
             jenkins.parameters([
-                jenkinspropertiesparameters().applicationNames(applicationNames)
+                choice(name: 'CHOICES', 
+                choices: application, 
+                description: 'This is a list of Application to be deployed')
             ])
         ])
     }
