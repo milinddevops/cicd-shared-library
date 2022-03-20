@@ -8,8 +8,8 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     //pipelineData.setJobParams(this, applications)
-        properties([
-            parameters([
+        this.properties([
+            this.parameters([
                 booleanParam(defaultValue: false, name: 'BuildAll', description: ''),
                 [$class: 'ChoiceParameter', choiceType: 'PT_CHECKBOX',
                     description: 'Choose environment category.',
