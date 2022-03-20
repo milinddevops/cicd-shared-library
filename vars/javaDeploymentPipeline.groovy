@@ -8,6 +8,7 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     pipelineData.setJobParams(this, applications)
+    
     /*properties([
     parameters([
         choice(name: 'size', choices: ['S', 'M', 'L'],  description: 'Size choice (S/M/L)')
