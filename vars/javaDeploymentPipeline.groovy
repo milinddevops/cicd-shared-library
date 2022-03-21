@@ -22,11 +22,11 @@ def call(List applications) {
         try {
             new InitStage().action()
             
-            new CheckoutStage().action()
-            
+            new CheckoutStage().action()       
             
 
         } catch(error) {
+            echo error.message
         }
     }
 }
