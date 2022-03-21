@@ -6,6 +6,4 @@ action() {
     return stage('Init') {
         new Init().action()
     }
-
-    return this
 }
