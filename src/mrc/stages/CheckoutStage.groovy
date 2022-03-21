@@ -6,4 +6,6 @@ void action() {
     return stage('Checkout') {        
          new Checkout().action()
     }
+
+    return this
 }
