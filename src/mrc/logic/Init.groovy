@@ -1,5 +1,6 @@
 package mrc.logic
 
-def action() {    
-    echo "Came here in Init"
+def action(pipelineData pipelinedata) {    
+    echo "Initalizing for: " + pipelinedata.applicationName
+    return pipelinedata
 }

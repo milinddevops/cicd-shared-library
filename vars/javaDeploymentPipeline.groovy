@@ -8,21 +8,14 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     pipelineData.setJobParams(this, applications)
-
-    /*properties([
-    parameters([
-        choice(name: 'APPLICATION_NAME', choices: applications, description: 'Please select application to be deployed.')       
-
-    ])])*/
-
-    //pipelineData pipelinedata = new pipelineData(this)
+    pipelineData pipelinedata = new pipelineData(this)
 
     utility.runPipeline('deployPod.yaml') {
 
         try {
-            new CheckoutStage().action()   
+            new CheckoutStage().action()
 
-            new InitStage().action()          
+            pipelineData = new InitStage().action(pipelineData)
 
         } catch(error) {
             echo error.message

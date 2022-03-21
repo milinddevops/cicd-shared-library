@@ -2,8 +2,8 @@ package mrc.stages
 
 import mrc.logic.Init
 
-def action() {
+def action(pipelineData pipelinedata) {
     return stage('Init') {
-        new Init().action()
+        new Init().action(pipelinedata)
     }
 }
