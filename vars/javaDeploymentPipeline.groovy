@@ -20,9 +20,11 @@ def call(List applications) {
     utility.runPipeline('deployPod.yaml') {
 
         try {
+            new InitStage().action()
+            
             new CheckoutStage().action()
             
-            def obj = new InitStage().action()
+            
 
         } catch(error) {
         }
