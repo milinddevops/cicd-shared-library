@@ -2,9 +2,8 @@ package mrc.logic
 
 import mrc.common.pipelineState.pipelineData
 
-def action(pipelineinfo) {
-    sh 'ls -ltr ./pet-clinic'
-    sh 'cd pet-clinic'
+def action(pipelineinfo) {    
+    sh 'cd pet-clinic; ls -ltr'
     sh 'mvn clean package'
     sh 'ls -ltr ./pet-clinic'
 }
