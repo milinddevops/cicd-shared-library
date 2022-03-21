@@ -15,7 +15,7 @@ def call(List applications) {
         try {
             new CheckoutStage().action()
 
-            pipelineData = new InitStage().action(pipelineData)
+            pipelinedata = new InitStage().action(pipelineData)
 
         } catch(error) {
             echo error.message
