@@ -3,7 +3,7 @@ package mrc.logic
 import mrc.common.pipelineState.pipelineData
 
 
-pipelineData action(pipelineData pipelinedata) {    
-    echo "Initalizing for: " + pipelinedata.applicationName
-    return pipelinedata
+pipelineData action(pipelineData pipelineinfo) {    
+    echo "Initalizing for: " + pipelineinfo.applicationName
+    return pipelineinfo
 }

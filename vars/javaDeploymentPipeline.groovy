@@ -8,14 +8,14 @@ import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
     pipelineData.setJobParams(this, applications)
-    pipelinedata = new pipelineData(this)
+    pipelineinfo = new pipelineData(this)
 
     utility.runPipeline('deployPod.yaml') {
 
         try {
             new CheckoutStage().action()
 
-            pipelinedata = new InitStage().action(pipelineData)
+            pipelineinfo = new InitStage().action(pipelineinfo)
 
         } catch(error) {
             echo error.message
