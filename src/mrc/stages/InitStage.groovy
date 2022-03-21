@@ -3,7 +3,7 @@ package mrc.stages
 import mrc.logic.Init
 
 void action() {
-    stage('Init') {
+    return stage('Init') {
         new Init().action()
     }
 }
