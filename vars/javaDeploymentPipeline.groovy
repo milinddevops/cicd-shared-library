@@ -3,8 +3,8 @@
 import mrc.common.pipelineState.pipelineData
 import mrc.stages.CheckoutStage
 import mrc.stages.InitStage
-/*import com.mrc.stages.BuildStage
-import com.mrc.stages.DeployStage*/
+import mrc.stages.BuildStage
+/*import mrc.stages.DeployStage*/
 
 def call(List applications) {
     pipelineData.setJobParams(this, applications)
@@ -15,7 +15,9 @@ def call(List applications) {
         try {
             new CheckoutStage().action()
 
-            pipelineinfo = new InitStage().action(pipelineinfo)            
+            pipelineinfo = new InitStage().action(pipelineinfo)
+
+            pipelineinfo = new BuildStage().action(pipelineinfo)       
             
         } catch(error) {
             echo error.message
