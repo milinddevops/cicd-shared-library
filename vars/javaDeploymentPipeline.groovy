@@ -15,9 +15,8 @@ def call(List applications) {
         try {
             new CheckoutStage().action()
 
-            pipelineinfo = new InitStage().action(pipelineinfo)
+            pipelineinfo = new InitStage().action(pipelineinfo)            
             
-            echo "From javaDeploymentPipeline: " + pipelineinfo.applicationName
         } catch(error) {
             echo error.message
         }
