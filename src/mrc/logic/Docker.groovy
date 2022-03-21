@@ -9,4 +9,6 @@ def action(pipelineinfo) {
         sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
         sh "docker push milinddocker/cicd::${pipelineinfo.imageTag}"
     }
+
+    return pipelineinfo
 }
