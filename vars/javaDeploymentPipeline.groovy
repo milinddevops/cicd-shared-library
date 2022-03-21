@@ -22,7 +22,7 @@ def call(List applications) {
         try {
             new CheckoutStage().action()
             
-            new InitStage().action()
+            new InitStage().invoke()
 
         } catch(error) {
         }

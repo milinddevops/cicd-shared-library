@@ -4,7 +4,6 @@ import mrc.logic.Init
 
 action() {
     return stage('Init') {
-         echo "Came here in Init"
-        //new Init().action()
+        new Init().action()
     }
 }
