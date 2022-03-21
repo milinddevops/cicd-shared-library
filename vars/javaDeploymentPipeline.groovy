@@ -7,13 +7,13 @@ import mrc.stages.InitStage
 import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
-    //pipelineData.setJobParams(this, applications)
+    pipelineData.setJobParams(this, applications)
 
-    properties([
+    /*properties([
     parameters([
         choice(name: 'APPLICATION_NAME', choices: applications, description: 'Please select application to be deployed.')       
 
-    ])])
+    ])])*/
 
     //pipelineData pipelinedata = new pipelineData(this)
 
@@ -21,7 +21,7 @@ def call(List applications) {
 
         try {
             new CheckoutStage().action()   
-            
+
             new InitStage().action()          
 
         } catch(error) {
