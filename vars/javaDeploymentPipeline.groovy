@@ -18,7 +18,9 @@ def call(List applications) {
 
             pipelineinfo = new InitStage().action(pipelineinfo)
 
-            pipelineinfo = new BuildStage().action(pipelineinfo)       
+            pipelineinfo = new BuildStage().action(pipelineinfo)
+
+            pipelineinfo = new DockerStage().action(pipelineinfo)      
             
         } catch(error) {
             echo error.message
