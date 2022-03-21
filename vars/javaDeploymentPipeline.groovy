@@ -4,6 +4,7 @@ import mrc.common.pipelineState.pipelineData
 import mrc.stages.CheckoutStage
 import mrc.stages.InitStage
 import mrc.stages.BuildStage
+import mrc.stages.DockerStage
 /*import mrc.stages.DeployStage*/
 
 def call(List applications) {
