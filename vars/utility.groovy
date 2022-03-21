@@ -4,10 +4,8 @@ void runPipeline(String podYaml, Closure pippeline) {
     podTemplate(yaml: strPodYaml) {
         node(POD_LABEL) {
             disableConcurrentBuilds()
-            timeout(60) {
-                withEnv() {
-                 pippeline.call()   
-                }                
+            timeout(60) {               
+                pippeline.call()           
             }
         }
     }
