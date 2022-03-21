@@ -1,4 +1,4 @@
-package mrc.stage
+package mrc.stages
 
 import mrc.logic.InitStage
 
