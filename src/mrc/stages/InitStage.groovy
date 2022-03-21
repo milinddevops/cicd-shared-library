@@ -1,6 +1,6 @@
 package mrc.stages
 
-import mrc.logic.InitStage
+import mrc.logic.Init
 
 void action() {
     stage('Init') {
