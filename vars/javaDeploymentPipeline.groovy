@@ -2,8 +2,8 @@
 
 import mrc.common.pipelineState.pipelineData
 import mrc.stages.CheckoutStage
-/*import com.mrc.stages.InitStage
-import com.mrc.stages.BuildStage
+import com.mrc.stages.InitStage
+/*import com.mrc.stages.BuildStage
 import com.mrc.stages.DeployStage*/
 
 def call(List applications) {
@@ -21,9 +21,8 @@ def call(List applications) {
 
         try {
             new CheckoutStage().action()
-
-
-
+            
+            new InitStage().action()
 
         } catch(error) {
         }
