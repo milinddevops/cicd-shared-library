@@ -1,7 +1,7 @@
 package mrc.logic
 
 import mrc.common.pipelineState.pipelineData
-import mrc.common.pipelineUtility
+//import mrc.common.pipelineUtility
 
 def action(pipelineinfo) {
     sh "cd ${pipelineinfo.applicationName}; docker build -t ${pipelineinfo.imageTag} ."
