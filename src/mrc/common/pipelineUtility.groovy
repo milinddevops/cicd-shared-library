@@ -1,3 +1,3 @@
-def buildDockerImg(pipelineData pipelineinfo, Closure buildDocker) {
+/*def buildDockerImg(pipelineData pipelineinfo, Closure buildDocker) {
 
-}
+}*/
