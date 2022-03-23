@@ -9,7 +9,7 @@ spec:
     args:
     - 99d
     volumeMounts:
-    - mountPath: /var
+    - mountPath: /home/jenkins
       name: maven-path
   - name: golang
     image: golang:1.16.5
@@ -31,4 +31,4 @@ spec:
         path: /var/run/docker.sock
     - name: maven-path
       hostPath:
-        path: /var
+        path: /home/jenkins
