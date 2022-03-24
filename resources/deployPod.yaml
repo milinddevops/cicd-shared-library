@@ -32,6 +32,3 @@ spec:
     - name: maven-path
       hostPath:
         path: /c/Users/MilindChavan/k8s/app-dependencies
-    - name: workspace-volume
-      hostPath:
-        path: /c/Users/MilindChavan/k8s
