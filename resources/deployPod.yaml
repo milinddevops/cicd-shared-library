@@ -10,7 +10,7 @@ spec:
     - 99d
     volumeMounts:
     - mountPath: /home/jenkins
-      name: maven-path
+      name: workspace-volume
   - name: golang
     image: golang:1.16.5
     command:
@@ -29,6 +29,6 @@ spec:
     - name: docker-sock
       hostPath:
         path: /var/run/docker.sock
-    - name: maven-path
+    - name: workspace-volume
       hostPath:
         path: /host
