@@ -31,4 +31,4 @@ spec:
         path: /var/run/docker.sock
     - name: maven-path
       hostPath:
-        path: /home/jenkins
+        path: /host
