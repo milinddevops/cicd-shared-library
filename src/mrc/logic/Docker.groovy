@@ -6,7 +6,9 @@ import mrc.common.pipelineState.pipelineData
 def action(pipelineinfo) {
 
     container('docker') {
-        sh "docker login -u ${env.milinddockerUser} -p ${env.milinddockerPassword}"
+        withCredentials([usernamePassword(credentialsId:'dockercreds', passwordVariable: 'Password', usernameVariable: 'Username')]) {
+            sh "docker login -u ${Username} -p ${Password}"
+        }
     }
 
     return pipelineinfo
