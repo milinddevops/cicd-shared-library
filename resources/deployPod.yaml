@@ -4,6 +4,9 @@ spec:
   containers:
   - name: maven
     image: maven:3.8.1-jdk-8
+    env:
+      - name: "HOME"
+        value: "/home/jenkins"
     command:
     - sleep
     args:
@@ -16,6 +19,9 @@ spec:
     image: golang:1.16.5
     command:
     - sleep
+    env:
+      - name: "HOME"
+        value: "/home/jenkins"
     args:
     - 99d
   - name: docker
@@ -23,14 +29,19 @@ spec:
     command:
     - cat
     tty: true
+    env:
+      - name: "HOME"
+        value: "/home/jenkins"
     volumeMounts:
     - mountPath: /var/run/docker.sock
       name: docker-sock
   - name: jnlp
     image: jenkins/inbound-agent
-    args: [ '\$(JENKINS_SECRET)', '\$(JENKINS_NAME)' ]
+    env:
+      - name: "HOME"
+        value: "/home/jenkins"
     volumeMounts:
-    - mountPath: "/home/jenkins/agent"
+    - mountPath: "/home/jenkins"
       name: "workspace-volume"
       readOnly: false
   volumes:
