@@ -2,16 +2,33 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-  - name: jnlp
-    image: jenkins/inbound-agent
-    env:
-      - name: "HOME"
-        value: "/home/jenkins"
+  - name: maven
+    image: maven:3.8.1-jdk-8
+    command:
+    - sleep
+    args:
+    - 99d
     volumeMounts:
-    - mountPath: "/home/jenkins"
-      name: "workspace-volume"
-      readOnly: false
+    - mountPath: /home/jenkins
+      name: maven-path
+  - name: golang
+    image: golang:1.16.5
+    command:
+    - sleep
+    args:
+    - 99d
+  - name: docker
+    image: docker:latest
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: docker-sock
   volumes:
-    - name: workspace-volume
+    - name: docker-sock
       hostPath:
-        path: /c/Users/MilindChavan/k8s/app-dependencies
+        path: /var/run/docker.sock
+    - name: maven-path
+      hostPath:
+        path: /home/jenkins
