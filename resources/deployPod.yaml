@@ -9,8 +9,9 @@ spec:
     args:
     - 99d
     volumeMounts:
-    - mountPath: /home/jenkins
-      name: maven-path
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
   - name: golang
     image: golang:1.16.5
     command:
@@ -29,6 +30,6 @@ spec:
     - name: docker-sock
       hostPath:
         path: /var/run/docker.sock
-    - name: maven-path
+    - name: workspace-volume
       hostPath:
         path: /c/Users/MilindChavan/k8s/app-dependencies
