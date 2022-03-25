@@ -7,7 +7,11 @@ def action(pipelineinfo) {
 
     container('docker') {
         withCredentials([usernamePassword(credentialsId:'dockercreds', passwordVariable: 'Password', usernameVariable: 'Username')]) {
-            sh "docker login -u ${Username} -p ${Password}"
+            sh ''' 
+               docker login -u ${Username} -p ${Password}"
+               docker build .
+               '''
+
         }
     }
 
