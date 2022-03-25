@@ -31,4 +31,4 @@ spec:
         path: /var/run/docker.sock
     - name: maven-path
       hostPath:
-        path: /c/Users/MilindChavan/k8s/app-dependencies
+        path: /home/jenkins
