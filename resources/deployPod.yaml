@@ -9,7 +9,7 @@ spec:
     args:
     - 99d
     volumeMounts:
-    - mountPath: /home/jenkins/agent/workspace/pet-clinic
+    - mountPath: /home/jenkins
       name: maven-path
   - name: golang
     image: golang:1.16.5
