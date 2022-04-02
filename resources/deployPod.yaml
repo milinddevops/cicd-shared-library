@@ -25,7 +25,7 @@ spec:
         - name: MAVEN_OPTS
           value: -Duser.home=/home/jenkins
   nodeSelector:
-    kubernetes.io/os: openshift
+    kubernetes.io/os: linux
   volumes:
     - name: task-pv-volume
       persistentVolumeClaim:
