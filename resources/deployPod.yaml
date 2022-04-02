@@ -15,7 +15,7 @@ spec:
       args:
         - 99d
       volumeMounts:
-        - name: home-volume
+        - name: task-pv-volume
           mountPath: /home/jenkins
       env:
         - name: HOME
@@ -23,6 +23,6 @@ spec:
         - name: MAVEN_OPTS
           value: -Duser.home=/home/jenkins
   volumes:
-    - name: home-volume
-      hostPath:
-        path: /host
+    - name: task-pv-volume
+      persistentVolumeClaim:
+          claimName: task-pv-claim
