@@ -24,7 +24,7 @@ spec:
           value: /home/jenkins
         - name: MAVEN_OPTS
           value: -Duser.home=/home/jenkins
-  nodePool: cluster
+  nodeName: localhost
   volumes:
     - name: task-pv-volume
       persistentVolumeClaim:
