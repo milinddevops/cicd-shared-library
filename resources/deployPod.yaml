@@ -21,6 +21,7 @@
           value: /home/jenkins
         - name: MAVEN_OPTS
           value: -Duser.home=/home/jenkins
+  nodeName: localhost
   volumes:
     - name: task-pv-volume
       persistentVolumeClaim:
