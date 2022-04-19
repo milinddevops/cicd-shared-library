@@ -15,4 +15,5 @@
       args:
       - 99d
     nodeSelector:
-      beta.kubernetes.io/os:linux
+    - beta.kubernetes.io:
+        os: linux
