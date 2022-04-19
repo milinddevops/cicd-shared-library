@@ -14,3 +14,5 @@
       - sleep
       args:
       - 99d
+    nodeSelector:
+      beta.kubernetes.io/os=linux
